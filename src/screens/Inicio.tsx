@@ -18,7 +18,7 @@ export default function Inicio({ navigation }: any): React.ReactElement {
 
             <TouchableOpacity
                 style={styles.touchableOpacity}
-                onPress={() => console.log('Historial')}
+                onPress={() => navigation.navigate('Historial')}
             >
                 <Text style={styles.text}>Historial</Text>
             </TouchableOpacity>
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         gap: 20,
-        backgroundColor: '#000000ff',
+        backgroundColor: 'black',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -49,15 +49,20 @@ const styles = StyleSheet.create({
     },
     touchableOpacity: {
         width: 200,
-        height: 50,
-        backgroundColor: '#ffffffff',
-        borderRadius: 10,
+        height: 70,
+        backgroundColor: 'black',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 15,
+        borderStyle: 'solid',
+        borderWidth: 2,
+        borderColor: 'white',
     },
     text: {
-        color: '#000000ff',
-        fontSize: 22,
+        color: 'white',
+        fontSize: 26,
         textAlign: 'center',
-        lineHeight: 50,
+        lineHeight: 60,
         fontWeight: 'bold',
     },
 });
