@@ -172,7 +172,7 @@ export default function Juego({ navigation }: any): React.ReactElement {
 
             {/* Boton volver */}
             <TouchableOpacity style={styles.contenedorVolver} onPress={() => navigation.navigate('Inicio')}>
-                <Text style={styles.textoNegro}>Volver</Text>
+                <Text style={styles.textoBlanco}>Volver</Text>
             </TouchableOpacity>
         </View>
     );
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
         color: '#ffffffff',
         fontSize: 20,
         textAlign: 'center',
-        lineHeight: 40,
+        lineHeight: 30,
         fontWeight: 'bold',
     },
     textoNegro: {
@@ -231,6 +231,7 @@ const styles = StyleSheet.create({
     },
     contenedor: {
         flex: 1,
+        gap: 50,
         backgroundColor: '#000000ff',
         alignItems: 'center',
         justifyContent: 'center',
@@ -258,12 +259,13 @@ const styles = StyleSheet.create({
         borderColor: '#333',
     },
     infoGanador: {
-        marginTop: 30,
+        position: 'absolute',
+        top: '20%',
         alignItems: 'center',
         padding: 10,
         backgroundColor: '#111',
         borderRadius: 10,
-        width: '80%',
+        width: '70%',
     },
     botonReiniciar: {
         width: 120,
@@ -275,12 +277,13 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     contenedorVolver: {
-        width: 120,
+        width: 100,
         height: 40,
-        backgroundColor: '#ffffffff',
-        borderRadius: 5,
+        backgroundColor: 'black',
+        borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 10,
+        borderWidth: 2,
+        borderColor: 'white',
     },
 });

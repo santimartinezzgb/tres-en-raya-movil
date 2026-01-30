@@ -36,7 +36,7 @@ export default function Menu({ navigation }: any): React.ReactElement {
             {/* Contenedor de logo */}
             <View style={styles.contenedorLogo}>
                 <Image
-                    source={require('../../assets/logoApp.png')}
+                    source={require('../../assets/tictactoe-logo.png')}
                     style={styles.logo}
                 />
             </View>
@@ -124,8 +124,9 @@ const styles = StyleSheet.create({
 
     /* Logo */
     logo: {
-        width: 100,
-        height: 100,
+        width: 250,
+        height: 150,
+        objectFit: 'contain',
     },
 
     /* Input para ingresar el nombre */
@@ -135,12 +136,14 @@ const styles = StyleSheet.create({
         gap: 10,
         justifyContent: 'space-between',
         alignItems: 'center',
+        borderWidth: 2,
+        borderColor: '#ffffff',
+        borderRadius: 5,
+        paddingHorizontal: 5,
     },
     inputTexto: {
-        width: 250,
-        height: 50,
-        backgroundColor: '#ffffff',
-        color: '#000000',
+        backgroundColor: '#000000',
+        color: '#ffffff',
         paddingHorizontal: 15,
         justifyContent: 'center',
         alignItems: 'center',
@@ -154,13 +157,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         width: 250,
-        height: 60,
+        height: 50,
     },
     textDificultad: {
         width: 110,
         fontSize: 22,
         textAlign: 'center',
-        lineHeight: 50,
+        lineHeight: 40,
         fontWeight: 'bold',
         borderRadius: 10,
         paddingHorizontal: 15,

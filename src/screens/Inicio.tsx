@@ -1,11 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image, BackHandler } from 'react-native';
+import { useFonts, FredokaOne_400Regular } from '@expo-google-fonts/fredoka-one';
 
 export default function Inicio({ navigation }: any): React.ReactElement {
+    let [fontsLoaded] = useFonts({
+        FredokaOne_400Regular,
+    });
     return (
         <View style={styles.container}>
             <Image
-                source={require('../../assets/logoApp.png')}
+                source={require('../../assets/tictactoe-logo.png')}
                 style={styles.logo}
             />
 
@@ -13,21 +17,21 @@ export default function Inicio({ navigation }: any): React.ReactElement {
                 style={styles.touchableOpacity}
                 onPress={() => navigation.navigate('Menu')}
             >
-                <Text style={styles.text}>Jugar</Text>
+                <Text style={[styles.text, styles.infantilFont]}>Jugar</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
                 style={styles.touchableOpacity}
                 onPress={() => navigation.navigate('Historial')}
             >
-                <Text style={styles.text}>Historial</Text>
+                <Text style={[styles.text, styles.infantilFont]}>Historial</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
                 style={styles.touchableOpacity}
                 onPress={() => BackHandler.exitApp()}
             >
-                <Text style={styles.text}>Salir</Text>
+                <Text style={[styles.text, styles.infantilFont]}>Salir</Text>
             </TouchableOpacity>
         </View>
     );
@@ -43,9 +47,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     logo: {
-        width: 200,
-        height: 200,
-        marginBottom: 40,
+        width: 250,
+        height: 150,
+        objectFit: 'contain',
     },
     touchableOpacity: {
         width: 200,
@@ -60,9 +64,14 @@ const styles = StyleSheet.create({
     },
     text: {
         color: 'white',
-        fontSize: 26,
+        fontSize: 20,
         textAlign: 'center',
-        lineHeight: 60,
+        lineHeight: 40,
         fontWeight: 'bold',
+    },
+    infantilFont: {
+        fontFamily: 'FredokaOne_400Regular',
+        letterSpacing: 1,
+        fontSize: 28,
     },
 });

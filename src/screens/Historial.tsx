@@ -75,7 +75,7 @@ export default function Historial({ navigation }: any): React.ReactElement {
             )}
 
             <TouchableOpacity style={styles.contenedorVolver} onPress={() => navigation.navigate('Inicio')}>
-                <Text style={styles.textBlack}>Volver</Text>
+                <Text style={styles.textWhite}>Volver</Text>
             </TouchableOpacity>
         </View>
     );
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     },
     contenedor: {
         flex: 1,
-        padding: 20,
+        padding: 40,
         backgroundColor: '#000000ff',
         alignItems: 'center',
         justifyContent: 'center',
@@ -117,13 +117,13 @@ const styles = StyleSheet.create({
     /* Boton de volver */
     contenedorVolver: {
         width: 100,
-        height: 40,
-        backgroundColor: '#ffffffff',
-        borderRadius: 5,
+        height: 50,
+        backgroundColor: 'black',
+        borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 20,
-        marginBottom: 30,
+        borderWidth: 2,
+        borderColor: 'white',
     },
     textTitulo: {
         color: '#ffffffff',
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 15,
         borderBottomWidth: 1,
-        borderBottomColor: '#333',
+        borderBottomColor: '#ffffff',
     },
     textNombre: {
         color: '#fff',
