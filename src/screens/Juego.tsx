@@ -107,7 +107,7 @@ export default function Juego({ navigation }: any): React.ReactElement {
 
         // PRIORIDAD DE MOVIMIENTOS DE LA IA
 
-        // 1. Intentar ganar
+        // Intentar ganar
         for (let i of disponibles) {
             if (i === null) continue;
             const tableroSimulado = [...tablero];
@@ -117,7 +117,7 @@ export default function Juego({ navigation }: any): React.ReactElement {
             }
         }
 
-        // 2. Bloquear al jugador para que no gane
+        // Bloquear al jugador para que no gane
         for (let i of disponibles) {
             if (i === null) continue;
             const tableroSimulado = [...tablero];
@@ -127,10 +127,10 @@ export default function Juego({ navigation }: any): React.ReactElement {
             }
         }
 
-        // 3. Tomar el centro si está disponible
+        // Tomar el centro si está disponible
         if (tablero[4] === null) return 4;
 
-        // 4. Aleatorio
+        // Aleatorio
         return obtenerMovimientoAleatorio();
     };
 

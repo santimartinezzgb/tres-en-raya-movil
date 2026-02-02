@@ -1,6 +1,29 @@
+
 # Tres en Raya
 
-Aplicación web para jugar al clásico Tres en Raya, desarrollada con TypeScript y Node.js.
+Aplicación web para jugar al clásico Tres en Raya, desarrollada con React native con TypeScript.
+
+## Capturas de pantalla
+
+### Pantalla de inicio
+La pantalla principal donde el usuario puede comenzar una nueva partida o acceder al historial.
+
+![Pantalla de inicio](images/iniciot.png)
+
+### Menú principal
+Desde aquí se navega a las diferentes secciones de la app.
+
+![Menú principal](images/menu.png)
+
+### Juego en curso
+Vista de la partida de Tres en Raya en desarrollo.
+
+![Juego en curso](images/partida.png)
+
+### Historial de partidas
+Muestra el registro de partidas jugadas y sus resultados.
+
+![Historial de partidas](images/historial.png)
 
 ## Tecnologías utilizadas
 - **Frontend:** React Native (TypeScript)
@@ -20,13 +43,11 @@ Aplicación web para jugar al clásico Tres en Raya, desarrollada con TypeScript
    ```
 2. Inicia el servidor de desarrollo:
    ```bash
-   ./start-dev.sh
+   ./start-dev.sh #Linux y Mac
+   ./start-dev-win.bat #Windows
    ```
 3. Accede a la app desde tu entorno local.
 
-## Notas
-- Requiere una base de datos PostgreSQL configurada (ver `/info/Instalaciones.md`).
-- Consulta `/info/` para detalles de configuración y funcionamiento.
 
----
-Desarrollado por santi.
+## Autor
+Santi Martínez
